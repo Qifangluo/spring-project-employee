@@ -52,7 +52,7 @@ public class EmployeeRestController {
    public Employee updateEmployee(@RequestBody Employee theEmployee) {
 	   
 	   employeeService.save(theEmployee);
-	   
+	   System.out.println("initialized updating employee from database");
 	   return theEmployee;
    }
    

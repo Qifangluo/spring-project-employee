@@ -43,7 +43,14 @@ public class EmployeeServiceImpl implements EmployeeService {
 	@Override
 	@Transactional
 	public void deleteById(int theId) {
+		
+		try {
 	    employeeDao.deleteById(theId);
+	
+		} catch (Exception e) {
+			System.out.println("the ID does not exist in the database");
+			
+		}
 	}
 
 }
